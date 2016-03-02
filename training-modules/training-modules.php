@@ -865,7 +865,7 @@ function completeCourseSession()
 	
 }
 
-function set_html_content_type() {
+function mod_set_html_content_type() {
     return 'text/html';
 }
 
@@ -888,7 +888,7 @@ function notifyCourseComplete( $id, $location ){
 
 		if( null !== $returner ){
 
-			add_filter( 'wp_mail_content_type', 'set_html_content_type' );
+			add_filter( 'wp_mail_content_type', 'mod_set_html_content_type' );
 
 		    //wp_mail('ahong@homecareassistance.com','here', 'test');
 
@@ -919,7 +919,7 @@ function notifyCourseComplete( $id, $location ){
 		    
 
 		    //Reset HTML Email Format
-		    remove_filter( 'wp_mail_content_type', 'set_html_content_type' );
+		    remove_filter( 'wp_mail_content_type', 'mod_set_html_content_type' );
 
 		    return true;
 
