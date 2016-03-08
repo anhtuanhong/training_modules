@@ -1152,6 +1152,7 @@ function getLastLogin($id){
 	wp_die();
 }
 
+//Course Reader
 function getCourses($id){
 	global $wpdb;
 	$trMod_courses = $wpdb->prefix . 'trMod_Courses';
