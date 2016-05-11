@@ -22,12 +22,13 @@ jQuery(document).ready(function($) {
                 'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
                 'username': $('form#modAdmin_login #username').val(), 
                 'password': $('form#modAdmin_login #password').val(), 
-                'security': $('form#modAdmin_login #security').val() },
-            success: function(data){
-                $('form#modAdmin_login p.status').text(data.message);
-                if (data.loggedin == true){
-                    document.location.href = ajax_login_object.redirecturl;
-                }
+                'security': $('form#modAdmin_login #security').val() 
+            }
+        }).done(function(data){
+            console.log(ajax_login_object.redirecturl);
+            $('form#modAdmin_login p.status').text(data.message);
+            if (data.loggedin == true){
+                document.location.href = ajax_login_object.redirecturl;
             }
         });
         e.preventDefault();

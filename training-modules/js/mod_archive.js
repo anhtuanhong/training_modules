@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
         $('.mod_error_msg').html();
         $('#mod_submit').hide();
         var mod_password = $('#mod_password').val();
-        console.log(mod_password);
+        //console.log(mod_password);
         checkPassword( mod_password );
     });
 
@@ -25,7 +25,9 @@ jQuery(document).ready(function($) {
             jQuery('.mod_wrapper').fadeIn('fast').find('#mod_loginForm').fadeIn('slow');
         } else
         {
+            
             jQuery('#mod_loginForm').hide();
+            displayModules('.mod_list_view', location);
             jQuery('.mod_wrapper').fadeIn().find('#mod_classDisplay').fadeIn('slow');
         }
     }

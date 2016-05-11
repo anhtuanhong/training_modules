@@ -34,7 +34,16 @@
 		<a class="login_button button" href="<?php echo wp_logout_url( get_bloginfo('url') . '/' . get_option('trMod_page_name') ); ?>">Logout</a>
 	</div><!--admin_bar-->
 	<div class="admin_wrapper">
-		<div id="mod_classDisplay" style="width: 95%;">
+		<div id="mod_moduleDisplay" style="width: 95%; display: none;">
+			<div class="switchView">VIEW TRAINEES</div>
+			<? if(get_option('mod_logo') != ''){?><img class="mod_logo" src="<? echo get_option('mod_logo');?>" /><? }?>
+			<h2>Modules Page</h2>
+			<? 	$user_ID = get_current_user_id();?>
+			<div id="mod_list" rel="<? echo $user_ID;?>" class="mod_list_view">
+			</div><!--mod_list-->
+		</div><!--mod_moduleDisplay-->
+		<div id="mod_classDisplay" class="show" style="width: 95%;">
+			<div class="switchView">VIEW MODULES</div>
 			<? if(get_option('mod_logo') != ''){?><img class="mod_logo" src="<? echo get_option('mod_logo');?>" /><? }?>
 			<h2>Module Trainees Page</h2>
 			<div class="mod_admin_search">
@@ -87,7 +96,7 @@
 			    	<td class="mod_list_courses_holder" colspan='7'>
 			    	</td>
 			    	<td colspan='2'><div class="button trMod_expando_close">Close</div></td>
-			    	<? /*<td class="mod_list_course_notify" colspan='4'>
+			    	<td class="mod_list_course_notify" colspan='4'>
 			    		<label>Location</label><select name="mod_location" id="mod_location"  realname="Location" class="validate[required]" required="required">
 			    		<option selected="selected" value="" bs='bs'>Please Select</option>
 		                <? //var_dump($locations_data);
@@ -99,7 +108,7 @@
 		                    <option <? echo $bs_string;?> value='<? echo $location_output;?>'><? echo $location[2];?><? echo $bs_sep;?><? echo $location[1];?></option>
 		                <? }?>
 		                </select>
-			    	</td>*/?>
+			    	</td>
 			    </tr>
 			    </table>
 			    <div id="modAdmin_msg"></div><!--modAdmin_msg-->
@@ -119,7 +128,33 @@
 <script type="text/javascript">
 //$.noConflict();
 jQuery(document).ready(function($) {
+	adminDisplayModules( '#mod_list' );
     $('body').fadeIn();
+
+    $('.switchView').click(function(){
+    	switchView();
+    });
+
+    function checkHash(){
+    	console.log(window.location.hash);
+    	if(window.location.hash && window.location.hash == '#module'){
+    		switchView();
+    	}
+    }
+
+    checkHash();
+
+    function switchView(){
+    	if( $('#mod_classDisplay').hasClass('show') ){
+    		$('#mod_classDisplay').hide().removeClass('show');
+    		$('#mod_moduleDisplay').fadeIn().addClass('show');
+    		window.location.hash = 'module';
+    	}else{
+    		$('#mod_moduleDisplay').hide().removeClass('show');
+    		$('#mod_classDisplay').fadeIn().addClass('show');
+    		window.location.hash = '';
+    	}
+    }
 });
 </script>
 </body>

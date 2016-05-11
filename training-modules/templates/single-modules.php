@@ -23,10 +23,15 @@
 		<!--slideshow-->
 		<div class="reveal">
 			<div class="header_logo">
-				<a href="<? echo get_bloginfo('url');?>/modules">Back</a>	
+			<? 	if ( !is_user_logged_in() ) { ?>
+				<a href="<? echo get_bloginfo('url');?>/modules">Back</a>
+			<? }else{?>
+				<a href="javascript:history.back()">Back</a>
+			<? }?>	
 			</div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+			<? 	if ( !is_user_logged_in() ) { ?>
 				<section class='intro'>
 					<div class='mod_intro_holder' align="center">
 						<h2><? the_title();?></h2>
@@ -39,6 +44,7 @@
 						<div id="mod_classStart" class="button" module="<? echo $post->ID;?>">Start</div>
 					</div><!--mod_intro_holder-->
 				</section><!--mod_intro-->
+			<? }?>
 				<? 
 
 				//SLIDESHOW
@@ -76,11 +82,11 @@
 							<h2><? the_title();?></h2>
 							<? $location_list = mod_get_location_list();?>
 							<? $mod_outro_text = get_option('mod_outro');?>
-							<p><? if( $mod_outro_text != '' )
+							<p style="text-align: center"><? if( $mod_outro_text != '' )
 							{
 								echo stripslashes( get_option('mod_outro') );
 							}?></p>
-							<select name="mod_location" id="mod_location"  realname="Location" class="validate[required]" required="required">
+							<? /*<select name="mod_location" id="mod_location"  realname="Location" class="validate[required]" required="required">
 					            <option selected="selected" value="" bs='bs'>Location to Notify</option>
 					            <? //var_dump($locations_data);
 					              foreach($location_list as $location){
@@ -90,7 +96,7 @@
 					                <option <? echo $bs_string;?> value='<? echo $location_output;?>'><? echo $location[2];?><? echo $bs_sep;?><? echo $location[1];?></option>
 					              <? }
 					          	?>
-					        </select>
+					        </select>*/?>
 					        <div id="mod_outro_error"></div>
 							<div id="mod_classEnd" class="button">Submit Completion</div>
 						</div><!--mod_classEndForm-->
@@ -134,6 +140,7 @@ jQuery(document).ready(function() {
 		checkCourseDuration( courseDuration );
 	});	
 
+<? if ( !is_user_logged_in() ) { ?>
 	if( !checkModSession() )
 	{
 		window.location.href = '<? echo get_bloginfo(url);?>/modules';
@@ -141,6 +148,9 @@ jQuery(document).ready(function() {
 	{
 		jQuery('.mod_wrapper').fadeIn();
 	}
+<? }else{?>
+	jQuery('.mod_wrapper').fadeIn();
+<? }?>
 
 	jQuery('#mod_classStart').click(function(){
 		jQuery('#mod_start_error').html('Loading...').fadeIn();

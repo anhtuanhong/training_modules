@@ -35,7 +35,7 @@ $('body').on('click', '.trMod_expando', function(e){
 			output = "<strong>Completed Courses</strong>"
 			output += '<table class="trMod_list_courses">';
 			output += '<tr><th>Course Name</th><th>Completed Date</th><th>Location Notified</th></tr>';
-			$.each(response, function(i, item){
+			
 				output += '<tr>';
 				output += '<td class="courseName">' + item.courseName + '</td>';
 				output += '<td class="courseComplete">' + item.courseComplete + '</td>';
@@ -45,7 +45,7 @@ $('body').on('click', '.trMod_expando', function(e){
 					output += '<td class="courseLocation"></td>';
 				}
 				output += '</tr>';
-			});
+			//});
 			output += '</table>'
 
 			$(elementRowID).find('td.mod_list_courses_holder').html(output);
@@ -277,7 +277,7 @@ function checkPassword(mod_password)
 	var mod_email = jQuery('#mod_email').val();
 	var mod_location = jQuery('#mod_location').val();
 	var bValid = true;
-	console.log(mod_location);
+	//console.log(mod_location);
 
     //allFields.removeClass( "ui-state-error" );
 
@@ -320,6 +320,7 @@ function checkPassword(mod_password)
 				}
 				//load
 				jQuery('#mod_loginForm').hide();
+				displayModules( '.mod_list_view' );
 				jQuery('#mod_classDisplay').fadeIn('slow');
 				jQuery('#mod_password').val('');
 				jQuery('#mod_submit').fadeIn();
@@ -338,6 +339,68 @@ function checkPassword(mod_password)
 		jQuery('#mod_submit').fadeIn();
 		jQuery('.mod_error_msg').html('Invalid Entries. Please try again.');
 	}
+}
+
+function displayModules( element ){
+    var location = localStorage.getItem( 'modSession_location');
+    console.log( location );
+    console.log( element );
+    var data = {
+        'action' : 'mod_getModules',
+        'nonce' : myAjax.nonce,
+        'admin' : '',
+        'location' : location
+    }
+
+    var results = queryModules( element, data );
+
+    console.log(results);
+}
+
+function adminDisplayModules( element ){
+	var mod_id =jQuery(element).attr('rel');
+	console.log(mod_id);
+	var data = {
+        'action' : 'mod_getModules',
+        'nonce' : myAjax.nonce,
+        'admin' : mod_id,
+        'location' : ''
+    }
+
+    var results = queryModules( element, data);
+}
+
+function queryModules( element, data){
+	jQuery.post(myAjax.url, data, function(response)
+    {
+    	console.log(response);
+        if( response != 'failed')
+        {
+            
+            var jsonResponse = jQuery.parseJSON(response);
+            console.log(jsonResponse);
+            jQuery.each(jsonResponse, function( i , item){
+                var html = '';
+                
+                html += '<div class="mod_entry">';
+                html += '<a href="' + item.permalink + '" alt="' + item.post_title + '">' + item.mod_image + '</a>';
+                html += '<a href="' + item.permalink + '" alt="' + item.post_title + '"><h3>' + item.post_title + '</h3></a>';
+                var module_meta = item.module_meta;
+                console.log(module_meta);
+                html += '<div class="mod_meta">' + module_meta.type.toUpperCase() + ' | ' + module_meta.mod_minimum + ' min.</div>';
+                html += '<p>' + item.post_content + '</p><div style="clear:both; width: 100%;"></div></div><!--mod_entry-->';
+            
+                jQuery(element).append(html).fadeIn();
+            });
+
+            return true;
+        }else
+        {   
+            jQuery(element).html('No Modules to Show.').fadeIn();
+            console.log('mod_getModules Failed.');
+            return false;
+        }
+    });
 }
 
 function startCourse(course_id)
@@ -433,7 +496,7 @@ function endCourse(url)
 			'action' : 'mod_completeCourse',
 			'nonce' : myAjax.nonce,
 			'id' : courseSessionID,
-			'mod_location' : mod_location
+			'mod_location' : ''
 		};
 
 		jQuery.post(myAjax.url, data, function(response)

@@ -14,8 +14,6 @@
 </head>
 <body class="modules">
 
-
-
 <div class="mod_wrapper">
 	<div id="mod_loginForm" class="mod_loginForm" style="display:none;">
 		<img class="mod_logo" src="<? echo get_option('mod_logo');?>" />
@@ -41,7 +39,7 @@
 		<div id="mod_submit_login" class="button">Login</div>
 	</div><!--mod_loginForm-->
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php //if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<div id="mod_classDisplay" style="display:none;">
 		<div id="mod_logout">Log Out</div>
@@ -49,7 +47,8 @@
 		<? if(get_option('mod_title') != ''){?><h2><? echo stripslashes( get_option('mod_title') );?></h2><? }?>
 		<? if(get_option('mod_desc') != ''){?><p style="width:90%; margin: 15px auto; clear: left;"><? echo stripslashes( get_option('mod_desc') );?></hp><? }?>
 		<div class="mod_list_view">
-			<? $modules = get_modules('');
+			<? //ADD Module Class Here ?>
+			<? /*$modules = get_modules('');
 			foreach($modules as $module){
 				$permalink = get_post_permalink($module->ID);
 				$module_meta = get_post_meta($module->ID, 'module_meta', true);?>
@@ -63,15 +62,14 @@
 				
 				</div><!--mod_entry-->
 			
-			<? }?>
+			<? } */?>
 		</div><!--mod_list_view-->
 		<div style="clear:both; margin-bottom: 10px;"></div>
 	</div><!--mod_classDisplay-->	
 
-<?php endwhile; // end of the loop.?>
+<?php //endwhile; // end of the loop.?>
 
 </div><!--mod_wrapper-->
-
 
 <?php wp_footer();?>
 </body>

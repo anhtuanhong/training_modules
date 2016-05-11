@@ -164,7 +164,6 @@ function trMod_run_when_plugin_activated()
 
 }
 
-
 function trMod_admin_init_post_type() {
 	register_post_type( 'modules',
 		array(
@@ -180,6 +179,7 @@ function trMod_admin_init_post_type() {
         		'not_found' => _x( 'No Module found', 'modules' ),
         		'not_found_in_trash' => _x( 'No Module found in Trash', 'modules' ),
         		'parent_item_colon' => _x( 'Parent Module:', 'modules' ),
+        		'taxonomies' => array('category'), 
         		'menu_name' => _x( 'Modules', 'Modules' ),
 			),
 			'public' => true,
@@ -193,9 +193,14 @@ function trMod_admin_init_post_type() {
 			//'rewrite' => array( 'slug' => 'modules', 'with_front' => false),
 			
 			'supports' => array( 'title', 'editor','excerpt', 'custom-fields', 'page-attributes', 'thumbnail'),
-			//'taxonomies' => array('category'),
+			'taxonomies' => array('category'),
 		));
 }/** end create_loc_post_types **/
+
+add_action( 'init', 'add_category_module' );
+function add_category_module() {
+	register_taxonomy_for_object_type( 'category', 'modules' );
+}
 
 //Add Settings Page
 function trMod_admin_generate_settings_page()  //Create Settings page
@@ -238,6 +243,10 @@ function hca_module_meta(){
 		.expander {cursor:pointer; border-radius:5px; border:1px solid #666; background-color:#ccc; width:95px; padding:2px 8px 2px 8px;}
 		.breakdown div {display:inline-block; width:50px; border-right:1px solid #ccc; padding:5px 10px 5px 10px;}
 		.breakdown div:last-child { border-right:none;}
+
+		.checkbox { width: 220px; display:inline-block; height: 40px;}
+		.sortable li .checkbox label {font-weight: normal; width: 195px;}
+		.sortable li .checkbox input { width: 5px;}
 		/*h2 { border-top:1px solid #ccc;}*/
 	</style>
 	<form method="POST" action="">
@@ -264,6 +273,34 @@ function hca_module_meta(){
 					}?>
 				<li id="mod_video_option" <? echo $display_vid;?>><label>Video Url:</label><input type='text' name='module_meta[video_link]' value='<? if(isset($module_meta[video_link])){ echo $module_meta[video_link];}?>' /></li>	
 				<li class="number"><label>Minimum Time Requirement in Minutes:<br />(Empty for no time requirement)</label><input type='number' name='module_meta[mod_minimum]' value='<? if(isset($module_meta[mod_minimum])){ echo $module_meta[mod_minimum];}?>' /></li>	
+				<li><label>Locations: </label><br />
+					<div class="checkbox">
+						<input type="checkbox" id="corporate"><label>Corporate</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="checkAll"><label>Check All</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="clearAll"><label>Clear All</label>
+					</div>
+					<br />
+					<? $categories = get_categories();
+					$post_categories = get_the_category($post->ID);
+					$corp_list = mod_get_corp_list('names');
+					foreach($categories as $category){
+						if( !strpos($category->name, 'United States') ){
+							$checker = '';
+							foreach($post_categories as $post_cat){
+								if($post_cat->term_id == $category->term_id){
+									$checker = 'checked';
+								}
+							}
+							$corp = ( in_array($category->name, $corp_list) ? 'rel="corporate"' : '');?>
+							<div class="checkbox" <? echo $corp;?>><input value="<? echo $category->term_id;?>" type="checkbox" name="mod_category[]" id="in-category-<? echo $category->term_id;?>" <? echo $checker;?>><label><? echo $category->name;?></label>
+							</div>
+						<? }?>
+					<? }?>
+				</li>
 			</ul>
 		</div>
 	</form>
@@ -278,6 +315,29 @@ function hca_module_meta(){
 						$('#mod_video_option').fadeIn();
 					}else{
 						$('#mod_video_option').hide();
+					}
+				});
+				$('#corporate').on('change', function(){
+					if($(this).is(':checked')){
+						$('.checkbox').each(function(){
+							if($(this).attr('rel') == 'corporate'){
+								$(this).find('input').attr('checked', 'checked');
+							}
+						});
+					}
+				});
+				$('#clearAll').on('change', function(){
+					//if($(this).is(':checked')){
+						$('.checkbox').each(function(){
+							$(this).find('input').removeAttr('checked');
+						});
+					//}
+				});
+				$('#checkAll').on('change', function(){
+					if($(this).is(':checked')){
+						$('.checkbox').each(function(){
+							$(this).find('input').attr('checked', 'checked');
+						});
 					}
 				});
 			});
@@ -311,7 +371,118 @@ function wpt_save_module_meta($post_id, $post) {
     	add_post_meta($post->ID, 'module_meta', $module_meta);
     }
 
+    if($_POST['mod_category']){
+    	wp_set_post_terms($post->ID, $_POST['mod_category'], 'category', false);
+    }else{
+    	wp_set_post_terms($post->ID, '', 'category', false);
+    }
+
 }
+
+//Add Author Categories to associate with
+function addModAdminMeta( $user ) {
+
+	$modMeta = get_the_author_meta( 'modMeta', $user->ID );
+?>
+	<h3>Locations</h3>
+	<style>
+		.checkbox { width: 220px; display:inline-block; height: 40px;}
+		.checkbox label { display: inline-block; vertical-align: middle; font-weight: normal; width: 195px;}
+		.checkbox input { display: inline-block; vertical-align: middle; width: 5px;}
+	</style>
+	<table class="form-table">
+		<tr>
+			<th>
+				<label for="titler">Locations associated with this user.</label></th>
+			<td>
+				<div class="checkbox">
+					<input type="checkbox" id="corporate"><label>Corporate</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="checkAll"><label>Check All</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="clearAll"><label>Clear All</label>
+					</div>
+					<br />
+					<? $categories = get_categories();
+					//$post_categories = get_the_category($post->ID);
+					$post_categories = $modMeta;
+					$corp_list = mod_get_corp_list('names');
+					foreach($categories as $category){
+						if( !strpos($category->name, 'United States') ){
+							$checker = '';
+							if(is_array($post_categories)){
+								foreach($post_categories as $post_cat){
+									if($post_cat == $category->term_id){
+										$checker = 'checked';
+									}
+								}
+							}
+							$corp = ( in_array($category->name, $corp_list) ? 'rel="corporate"' : '');?>
+							<div class="checkbox" <? echo $corp;?>><input value="<? echo $category->term_id;?>" type="checkbox" name="modMeta[]" id="in-category-<? echo $category->term_id;?>" <? echo $checker;?>><label><? echo $category->name;?></label>
+							</div>
+						<? }?>
+					<? }?>
+			</td>
+		</tr>
+	</table>
+	<script type='text/javascript'>
+		(function($) 
+		{
+			$(document).ready(function(){
+				$('#mod_type').on('change', function(){
+					var type = $(this).val();
+					if(type == 'video')
+					{
+						$('#mod_video_option').fadeIn();
+					}else{
+						$('#mod_video_option').hide();
+					}
+				});
+				$('#corporate').on('change', function(){
+					if($(this).is(':checked')){
+						$('.checkbox').each(function(){
+							if($(this).attr('rel') == 'corporate'){
+								$(this).find('input').attr('checked', 'checked');
+							}
+						});
+					}
+				});
+				$('#clearAll').on('change', function(){
+					//if($(this).is(':checked')){
+						$('.checkbox').each(function(){
+							$(this).find('input').removeAttr('checked');
+						});
+					//}
+				});
+				$('#checkAll').on('change', function(){
+					if($(this).is(':checked')){
+						$('.checkbox').each(function(){
+							$(this).find('input').attr('checked', 'checked');
+						});
+					}
+				});
+			});
+		})( jQuery );
+	</script>
+<?php }
+
+function saveModAdminMeta( $user_id ) {
+	
+	if ( !current_user_can( 'edit_user', $user_id ) )
+		return FALSE;
+	
+	update_usermeta( $user_id, 'modMeta', $_POST['modMeta'] );
+}
+
+add_action( 'show_user_profile', 'addModAdminMeta' );
+add_action( 'edit_user_profile', 'addModAdminMeta' );
+
+add_action( 'personal_options_update', 'saveModAdminMeta' );
+add_action( 'edit_user_profile_update', 'saveModAdminMeta' );
+
+
 
 function orderGalleryByTitle( $gallery){
 	$return = array();
@@ -324,11 +495,17 @@ function orderGalleryByTitle( $gallery){
 }
 
 function get_modules($cat){
-	$args = array(
+	/*$args = array(
 		'posts_per_page'   => -1,
 		'offset'           => 0,
 		'category'         => '',
-		'category_name'    => $cat,
+		'category_name'    => '',
+		'tax_query'		   =>  
+			array(
+				'taxonomy' => 'category',
+				'terms'    => $cat
+				
+			),
 		'orderby'          => '',
 		'order'            => 'ASC',
 		'include'          => '',
@@ -341,8 +518,29 @@ function get_modules($cat){
 		'author'	   => '',
 		'post_status'      => 'publish',
 		'suppress_filters' => true 
-	);
-	$posts_array = get_posts( $args );
+	);*/
+	if(is_array($cat)){
+		$args = array(
+			'post_type' => 'modules',
+	        'tax_query' => array( array(
+	            'taxonomy' => 'category',
+	            'field' => 'term_id',
+	            'terms' => $cat,
+	        ))
+	    );
+	}else{
+		$args = array(
+			'post_type' => 'modules',
+	        'tax_query' => array( array(
+	            'taxonomy' => 'category',
+	            'field' => 'name',
+	            'terms' => $cat,
+	        ))
+	    );
+	}
+	$posts_array = new WP_Query( $args );
+
+	//var_dump($posts_array);
 
 	return $posts_array;
 }
@@ -658,6 +856,31 @@ function get_active_states(){
 	return $active_array;
 }
 
+function mod_get_corp_list($type){
+
+  $url = 'http://homecareassistance.com/api?method=match_list&type=corporate';
+  $locations_data = mod_get_data($url);
+  $xml = simplexml_load_string($locations_data);
+  $location_list = array();
+
+
+
+  foreach($xml->location as $location_city){
+    foreach($location_city->location as $location){
+      	$state = $location->state;
+      	$namer = $location->name;
+      	$postal = $location->postal;
+      	if($type == 'names'){
+      		$location_list[] = $state.'-'.$namer;
+      	}else{
+      		$location_list[] = array($postal, $namer, $state);
+      	}
+    }
+  }
+
+  return $location_list;
+}
+
 function mod_get_location_list(){
 
   $url = 'http://homecareassistance.com/api?method=match_list';
@@ -768,6 +991,66 @@ function mod_get_email_job($postal){
   return $location_list;
 }
 
+
+//Add Categories to Admin Pages
+
+/*function addCategories(){
+	$location_list = mod_get_location_list();
+
+	foreach($location_list as $location){
+		$string = $location[2].'-'.$location[1];
+		wp_insert_term(
+	        $string,
+	        'category',
+	        array(
+	          'description' => $string,
+	          'slug'        => strtolower($string)
+	        )
+    	);
+	}
+}
+
+addCategories();*/
+
+
+//Modules API
+
+add_action( 'wp_ajax_nopriv_mod_getModules', 'getLocationModules');
+add_action( 'wp_ajax_mod_getModules', 'getLocationModules');
+
+function getLocationModules(){
+	$location = $_POST['location'];
+	$admin = $_POST['admin'];
+
+	if( $admin != '' ){
+		$mod_array = $modMeta = get_the_author_meta( 'modMeta', $admin );
+		$modules = get_modules($mod_array);
+	}else{
+		$modules = get_modules($location);
+	}
+
+	if($modules->have_posts()) {
+        while($modules->have_posts()) : $modules->the_post();
+            $holder = array();
+            $id = get_the_ID();
+            $holder['mod_id'] = $id;
+			$holder['permalink'] = get_post_permalink($id);
+			$holder['post_title'] = get_the_title();//$module->post_title;
+			$holder['post_content'] = get_the_content(); //$module->post_content;
+			$holder['module_meta'] = get_post_meta($id, 'module_meta', true);
+			$holder['mod_image'] = get_the_post_thumbnail( $id, 'thumbnail' );
+
+			$returner[$id] = $holder;
+        endwhile;
+
+        echo json_encode($returner);
+     }else{
+     	echo 'failed';
+     }
+	
+	wp_die();
+}
+
 //Courses API
 
 add_action( 'wp_ajax_nopriv_mod_checkCourse', 'checkCourseSession');
@@ -782,28 +1065,6 @@ function checkCourseSession(){ //Checks for exisiting or adds a new record
 	$user_id = $_POST['user_id'];
 	$course_id = $_POST['course_id'];
 
-	/*$sql = "SELECT * FROM $trMod_courses WHERE user_id = '$user_id' AND course_id = '$course_id'";
-
-	$results = $wpdb->get_row($sql);
-	//var_dump($results);
-	if ( null !== $results ) 
-	{
-	  	$id = $results->id;
-		
-		ADD LOCATION
-
-		$returner = updateCourseSession( $id, 'updateStart', NULL );
-		
-		if($returner !== false)
-		{
-			echo $id;
-		}else
-		{
-			echo'Failed to Add Course. Please Try Again.';
-		}
-
-	} else 
-	{*/
 		$returner = $wpdb->insert(
 			$trMod_courses,
 			array(
@@ -842,13 +1103,14 @@ function completeCourseSession()
 	check_ajax_referer( 'mod_passwordNonce', 'nonce' );
 	if(true){
 		$id = $_POST['id'];
-		$location = $_POST['mod_location'];
-		$results = updateCourseSession( $id, 'updateEnd', $location );
+		//$location = $_POST['mod_location'];
+		$results = updateCourseSession( $id, 'updateEnd', '' );
 
 		if($results !== false)
 		{
 			//echo $id;
-			$returner = notifyCourseComplete( $id, $location );
+			//$returner = notifyCourseComplete( $id, $location );
+			$returner = notifyCourseComplete( $id );
 			if( $returner )
 			{
 				echo $id;
@@ -869,7 +1131,7 @@ function mod_set_html_content_type() {
     return 'text/html';
 }
 
-function notifyCourseComplete( $id, $location ){
+function notifyCourseComplete( $id ){
 	//Get Information
 	global $wpdb;
 	$trMod_courses = $wpdb->prefix . 'trMod_Courses';
@@ -892,10 +1154,10 @@ function notifyCourseComplete( $id, $location ){
 
 		    //wp_mail('ahong@homecareassistance.com','here', 'test');
 
-		    $email_to = mod_get_distr_list($results->notifyLocation);
+		    $email_to = mod_get_distr_list( $returner->location );
 
-		    //$Sendto = "ahong@homecareassistance.com, ".$email_to;
-		    $Sendto = "ahong@homecareassistance.com";
+		    $Sendto = "ahong@homecareassistance.com, ".$email_to;
+		    //$Sendto = "ahong@homecareassistance.com";
 		    $date = date('l jS \of F Y h:i:s A');
 		    //$Bcc = "test2@test.com";
 
@@ -907,15 +1169,15 @@ function notifyCourseComplete( $id, $location ){
 		    <b>Caregiver Email:</b> '.$returner->email.PHP_EOL.'<br />
 		    <b>Caregiver Main Location:</b> '.$returner->location.'<br /><br />
 		    <b>Course Completed:</b> '.getCourseName($results->course_id).'<br />
-		    <b>Course Completed At:</b> '.$results->courseEnd.' EST<br />
-		    <b>Course Completed Location Notified:</b> '.$results->notifyLocation.'<br /><br />
+		    <b>Course Completed At:</b> '.$date.' EST<br />
+		    <b>Course Completed Location Notified:</b> '.$returner->location.'<br /><br />
 		    <b>Sent To:</b> '.$email_to;
 
 		    $headers .= 'From: HomeCareAssistance.com <ahong@homecareassistance.com>' . "\r\n";
 		        
 		    //$subject = $returner->firstName.' '.$returner->lastName.' has completed the course '.getCourseName( $results->course_id );
 
-		    wp_mail( $Sendto , 'New Caregiver Course Completion', $string, $headers);
+		    wp_mail( $Sendto , 'New Caregiver Training Course Completion - '.strtoupper( $returner->firstName ).' '.strtoupper( $returner->lastName ), $string, $headers);
 		    
 
 		    //Reset HTML Email Format
@@ -997,7 +1259,7 @@ function ajax_login(){
         echo json_encode(array('loggedin'=>true, 'message'=>__('Login successful, redirecting...')));
     }
 
-    die();
+    wp_die();
 }
 
 function queryCourses(){
