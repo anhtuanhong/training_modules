@@ -35,7 +35,7 @@ $('body').on('click', '.trMod_expando', function(e){
 			output = "<strong>Completed Courses</strong>"
 			output += '<table class="trMod_list_courses">';
 			output += '<tr><th>Course Name</th><th>Completed Date</th><th>Location Notified</th></tr>';
-			
+			$.each(response, function(i, item){
 				output += '<tr>';
 				output += '<td class="courseName">' + item.courseName + '</td>';
 				output += '<td class="courseComplete">' + item.courseComplete + '</td>';
@@ -45,7 +45,7 @@ $('body').on('click', '.trMod_expando', function(e){
 					output += '<td class="courseLocation"></td>';
 				}
 				output += '</tr>';
-			//});
+			});
 			output += '</table>'
 
 			$(elementRowID).find('td.mod_list_courses_holder').html(output);

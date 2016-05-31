@@ -35,7 +35,7 @@
 	</div><!--admin_bar-->
 	<div class="admin_wrapper">
 		<div id="mod_moduleDisplay" style="width: 95%; display: none;">
-			<div class="switchView">VIEW TRAINEES</div>
+			<div class="switchView button">VIEW TRAINEES</div>
 			<? if(get_option('mod_logo') != ''){?><img class="mod_logo" src="<? echo get_option('mod_logo');?>" /><? }?>
 			<h2>Modules Page</h2>
 			<? 	$user_ID = get_current_user_id();?>
@@ -43,7 +43,7 @@
 			</div><!--mod_list-->
 		</div><!--mod_moduleDisplay-->
 		<div id="mod_classDisplay" class="show" style="width: 95%;">
-			<div class="switchView">VIEW MODULES</div>
+			<div class="switchView button">VIEW MODULES</div>
 			<? if(get_option('mod_logo') != ''){?><img class="mod_logo" src="<? echo get_option('mod_logo');?>" /><? }?>
 			<h2>Module Trainees Page</h2>
 			<div class="mod_admin_search">
@@ -96,7 +96,7 @@
 			    	<td class="mod_list_courses_holder" colspan='7'>
 			    	</td>
 			    	<td colspan='2'><div class="button trMod_expando_close">Close</div></td>
-			    	<td class="mod_list_course_notify" colspan='4'>
+			    	<? /*<td class="mod_list_course_notify" colspan='4'>
 			    		<label>Location</label><select name="mod_location" id="mod_location"  realname="Location" class="validate[required]" required="required">
 			    		<option selected="selected" value="" bs='bs'>Please Select</option>
 		                <? //var_dump($locations_data);
@@ -108,7 +108,7 @@
 		                    <option <? echo $bs_string;?> value='<? echo $location_output;?>'><? echo $location[2];?><? echo $bs_sep;?><? echo $location[1];?></option>
 		                <? }?>
 		                </select>
-			    	</td>
+			    	</td>*/?>
 			    </tr>
 			    </table>
 			    <div id="modAdmin_msg"></div><!--modAdmin_msg-->

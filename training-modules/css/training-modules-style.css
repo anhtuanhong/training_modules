@@ -17,7 +17,7 @@ body.modules div#mod_classDisplay, body.modules div#mod_moduleDisplay { width: 8
 body.modules div#mod_classDisplay img.mod_logo, body.modules div#mod_moduleDisplay img.mod_logo { width: 100px; float:left; margin-right: 10px;}
 body.modules div#mod_classDisplay h2, body.modules div#mod_moduleDisplay h2 { clear: none; height: 40px;}
 
-body.modules div.switchView { display: block; float:right; margin: 10px;}
+body.modules div.switchView { display: block; float:right; margin: 10px; cursor: pointer;}
 
 body.modules div.header_logo { position: absolute; top: 10px; left: 10px; z-index: 100000;}
 

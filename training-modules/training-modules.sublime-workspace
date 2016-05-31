@@ -1,0 +1,1044 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ajax",
+				"ajax_login_object"
+			],
+			[
+				"post_cat",
+				"post_categories"
+			],
+			[
+				"strto",
+				"strtoupper"
+			],
+			[
+				"trMod_expando",
+				"trMod_expando_close"
+			],
+			[
+				"trMod_course",
+				"trMod_Courses"
+			],
+			[
+				"trMod",
+				"trMod-element-placeholder"
+			],
+			[
+				"element",
+				"elementRowID"
+			],
+			[
+				"last",
+				"last_login"
+			],
+			[
+				"course",
+				"course_completed"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"lastName",
+				"lastName"
+			],
+			[
+				"log",
+				"log"
+			],
+			[
+				"check",
+				"checkModSession"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"update",
+				"updateCourseSession"
+			],
+			[
+				"ele",
+				"elementRow"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"table",
+				"table_leads_query"
+			],
+			[
+				"sub",
+				"substr"
+			],
+			[
+				"open",
+				"openNFDialog"
+			],
+			[
+				"hca",
+				"hca_nf_form"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"recent",
+				"recent-press-element-placeholder"
+			],
+			[
+				"nf_",
+				"nf_hideAll"
+			],
+			[
+				"nf-",
+				"nf-signup"
+			],
+			[
+				"me",
+				"member_data"
+			],
+			[
+				"autoresponse_",
+				"autoresponse_html"
+			],
+			[
+				"hca_ba",
+				"hca_bayarea_locations"
+			],
+			[
+				"ac",
+				"actual_link_form"
+			],
+			[
+				"cul",
+				"culture_book"
+			],
+			[
+				"scroll",
+				"scroll_icon1"
+			],
+			[
+				"scro",
+				"scrollMagicController"
+			],
+			[
+				"trigger",
+				"trigger"
+			],
+			[
+				"end_",
+				"end_parallax_2"
+			],
+			[
+				"hyll_p",
+				"hyll_parallax_2"
+			],
+			[
+				"webinar",
+				"webinar_parallax"
+			],
+			[
+				"bcm",
+				"bcm_pyramid"
+			],
+			[
+				"gra",
+				"graph_scene"
+			],
+			[
+				"add",
+				"addIndicators"
+			],
+			[
+				"para",
+				"parallax_scene5"
+			],
+			[
+				"line",
+				"lineGraph-holder"
+			],
+			[
+				"lineGra",
+				"lineGraph_2weeks"
+			],
+			[
+				"lineG",
+				"lineGraph_2weeks"
+			],
+			[
+				"from",
+				"FROM"
+			],
+			[
+				"location",
+				"location_id"
+			],
+			[
+				"locations_array",
+				"locations_array_temp"
+			],
+			[
+				"main_bl",
+				"main_banner_mobile"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"featured",
+				"featured_mobile"
+			],
+			[
+				"location_list",
+				"location_list_unique"
+			],
+			[
+				"setup_theme_",
+				"setup_theme_admin_menus_competition"
+			],
+			[
+				"thanks",
+				"thanks_switch"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"write",
+				"writeElement"
+			],
+			[
+				"contact",
+				"contact_info"
+			],
+			[
+				"count",
+				"count_refers"
+			],
+			[
+				"request",
+				"request_ip"
+			],
+			[
+				"req",
+				"request_city"
+			],
+			[
+				"ccc",
+				"ccc"
+			],
+			[
+				"bxslider",
+				"bxslider_banner"
+			],
+			[
+				"banner",
+				"banner_smaller"
+			],
+			[
+				"bx",
+				"bxslider_banner"
+			],
+			[
+				"get_cr",
+				"get_current_blog_id"
+			],
+			[
+				"download_sect",
+				"download_section_list"
+			],
+			[
+				"download",
+				"download_section_list"
+			],
+			[
+				"path",
+				"path_file"
+			],
+			[
+				"strip",
+				"stripslashes"
+			],
+			[
+				"Subm",
+				"Submission_Form"
+			],
+			[
+				"distr",
+				"distr_email"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"XML",
+				"XMLRPClientWordPress"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"bacg",
+				"background-position"
+			],
+			[
+				"jna",
+				"jneshat"
+			],
+			[
+				"Louis",
+				"Louis-Ferdinand"
+			],
+			[
+				"P",
+				"PHOENIX"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "training-modules.php",
+			"settings":
+			{
+				"buffer_size": 40309,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "admin/training-module-settings.php",
+			"settings":
+			{
+				"buffer_size": 4187,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/archive-modules.php",
+			"settings":
+			{
+				"buffer_size": 3307,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/training-modules-style.css",
+			"settings":
+			{
+				"buffer_size": 4537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/single-modules.php",
+			"settings":
+			{
+				"buffer_size": 5882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/page-modules_trainees.php",
+			"settings":
+			{
+				"buffer_size": 6792,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/mod_functions.js",
+			"settings":
+			{
+				"buffer_size": 15865,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/mod_archive.js",
+			"settings":
+			{
+				"buffer_size": 1008,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/ajax-login-script.js",
+			"settings":
+			{
+				"buffer_size": 1459,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/anhtuanhong/Downloads/match_hca.sql",
+		"/Users/anhtuanhong/Dropbox/TestServer/wp-content/plugins/training-modules/templates/archive-modules.php",
+		"/Users/anhtuanhong/Dropbox/TestServer/wp-content/plugins/training-modules/templates/single-modules.php",
+		"/Volumes/Mercury/Dropbox/TestServer/wp-content/plugins/training-modules/css/reveal.css",
+		"/Volumes/Mercury/Dropbox/TestServer/wp-content/plugins/training-modules/templates/single-modules.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/Plugins/hca-recent-press/hca-recent-press.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA_Training-Module/training-modules/css/training-modules-admin.css",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/functions.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-api.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/map/map_svg.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca_v2_micro/RandomTEXT",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/header.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/hca-recent-press/hca-recent-press.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads/js/leads_query.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/javascript/main.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/javascript/map-min.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/newsletter-form.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/boxes/newsletter_signup.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads/function.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads/leads_page_export.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads/js/jquery.table2excel.min.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads/leads_page.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads_page_export.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/js/leads_query.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/hca-recent-press/admin/hca_rp_admin_settings.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/hca-recent-press/css/hca_rp_admin.css",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/style.css",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-press_room.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/contact-mailer.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-recent_press.php",
+		"/Users/anhtuanhong/Dropbox/Karas/Wordpress/jupiter/woocommerce/checkout/review-order.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/hca-recent-press/js/hca_rp_admin.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/advanced-custom-fields/acf.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/advanced-custom-fields/core/api.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/digg-digg/digg-digg.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/hca-recent-posts/hca-recent-posts.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-contact_sidebar.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-contact_form.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/test_script.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/contact-form.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/api_functions.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-maptest.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/Plugins/wp-html-mail/function.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-webinar_list.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/inpage-contact-form.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-user_funnel-hourly.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/boxes/meet-the-team.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/comp_matrix.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-thankspage.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/loop.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/single-press_releases.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/single.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/images/chicago.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/header-bootstrap.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/header-va.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/headermobile.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/headertwittermobile.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/social/social_bar.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/newwebform.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/tpl-12days-content.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/tpl-12days.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/header-FRENCH.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/boxes/blog.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-webinar-series_list.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/comp_settings.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/boxes/hca_bayarea_locations.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/comp_criteria.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/meet_the_team.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/javascript/culturebook.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/map/map_both_v2.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-culturebook.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads_page.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/googleanalytics/googleanalytics.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/googleanalytics/options.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/arrow.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/map/map_both.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/dt_pop.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/hca_logo.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/bcm_pyramid.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Design/HCA/Balanced Care Method/Balanced Care Pyramid.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/houses.svg",
+		"/Users/anhtuanhong/Desktop/functions.php",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/javascript/timeline.js",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/tenseniors.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/aginggraph.svg",
+		"/Users/anhtuanhong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/classic_logo.svg",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/functions.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/leads_page.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/map/map_north.svg",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/map/northamerica.svg",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/classic_logo.svg",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/svg/Classic Red and White Logo.svg",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/javascript/tiimeline.js",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-press_room.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-timeline_old.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-api.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/style.css",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/map/map_svg.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/single-locations.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/footer-locations.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-webinar_list.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-maptest.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-home_5.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/javascript/main.js",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/contact-form.php",
+		"/Users/ahong/Desktop/Back Ups/HCA_MN/wp-langs-en.phtml",
+		"/Users/ahong/Desktop/Plugins_Temp/wp-config.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/comp_settings.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/comp_matrix.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/inpage-contact-form.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-recent_press.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-webinar-series_list.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-contact_sidebar_bottom.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-contact_sidebar.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-home_4.php",
+		"/Users/ahong/Dropbox/HCA/Web/HCA/hcacorpv2/hca/header.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/contact-form.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-api.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/api_functions.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-maptest.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-home_4.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/google_conversion_scripts.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-thankspage.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/admin/boxes/intro_boxes.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/inc/contact/inpage-contact-form.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/v2_tpl-contact_sidebar.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/functions.php",
+		"/Volumes/Mercury/Dropbox/HCA/Web/HCA/hcacorpv2/hca/style.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ajaxlogin",
+			"User Locations",
+			"user meta",
+			"author",
+			"AP_save_custom_user_profile_fields",
+			"AP_add_custom_user_profile_fields",
+			"$",
+			"modules->ID",
+			"loop",
+			"completeCourse",
+			"checkPassword",
+			"sk_add_category_taxonomy_to_events",
+			"get_modules",
+			"[Locations]",
+			"resources",
+			"Resources",
+			"author",
+			"mod_get_distr_list",
+			"notifyCourseComplete",
+			"mod_set_html_content_type()",
+			"mod_set_html_content_type",
+			"trMod_init_styles",
+			"stylel",
+			"cat_name",
+			"get_data",
+			"div",
+			"$post",
+			"attr('value');",
+			"hca_pt_",
+			"$",
+			"i+1)",
+			"firstName",
+			"d_order",
+			"lastName",
+			"lastNamer",
+			"_GET",
+			"results",
+			"mod_",
+			"firstName",
+			"first",
+			"firstName",
+			"JQUERY",
+			"jQuery",
+			"jquery",
+			"jQuery",
+			"th",
+			"class=\"",
+			"recent-press",
+			"#login",
+			"#modAdmin",
+			"home_url()",
+			"div",
+			"Username",
+			"#login",
+			"my_plugin",
+			"$",
+			"jQuery",
+			"return",
+			"update",
+			"name",
+			"menu_link",
+			"locations'",
+			"Location'",
+			"Location",
+			"location",
+			"Location",
+			"location",
+			"Location",
+			"location",
+			"Location",
+			"location",
+			"Location",
+			"trmod",
+			"UA-503186-1",
+			"186-1",
+			"386-1",
+			"show_loc",
+			"1861",
+			".xlsx",
+			"url",
+			"date",
+			"date'",
+			"date",
+			"location",
+			"date",
+			"location",
+			"d_dater",
+			"dater",
+			"leads",
+			"nf-intro",
+			"nf-blog",
+			"nfLogcalStorage",
+			"']",
+			"['",
+			"['d_dater']",
+			"image_src",
+			"custom_date",
+			"'tr#'+d_order",
+			"currentholder",
+			"ID;",
+			"ID",
+			"id",
+			"ID",
+			"id",
+			"ID",
+			"id",
+			"ID",
+			"td",
+			"/div",
+			"<div",
+			"/div",
+			"<div",
+			"<? echo $id;?>",
+			"add",
+			"local_resources",
+			"dd_button_global_setup",
+			"dd_button_setup",
+			"dd_button",
+			"dd_button_global_setup",
+			"$dd_button_global_setup,",
+			".$dd_button_global_setup,",
+			"$dd_button_global_setup",
+			"dd_",
+			"meta_box_fields",
+			"recipient",
+			"mobile_call",
+			"contact_sidebar",
+			"contact"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "training-modules.php",
+					"settings":
+					{
+						"buffer_size": 40309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36035,
+								36035
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "admin/training-module-settings.php",
+					"settings":
+					{
+						"buffer_size": 4187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 181.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "templates/archive-modules.php",
+					"settings":
+					{
+						"buffer_size": 3307,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3210,
+								3210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/training-modules-style.css",
+					"settings":
+					{
+						"buffer_size": 4537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1632,
+								1632
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "templates/single-modules.php",
+					"settings":
+					{
+						"buffer_size": 5882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1021,
+								1021
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "templates/page-modules_trainees.php",
+					"settings":
+					{
+						"buffer_size": 6792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1639,
+								1639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 197.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/mod_functions.js",
+					"settings":
+					{
+						"buffer_size": 15865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12296,
+								12585
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6931.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/mod_archive.js",
+					"settings":
+					{
+						"buffer_size": 1008,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								347,
+								347
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/ajax-login-script.js",
+					"settings":
+					{
+						"buffer_size": 1459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1341,
+								1341
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.420384071549,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Plugins/hca-recent-press/admin/hca_rp_admin_settings.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true
+}
